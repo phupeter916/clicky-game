@@ -1,0 +1,25 @@
+nav {
+    height: 75px;
+    background-color: rgb(2, 30, 89);
+    color: rgb(252, 255, 219);
+}
+
+.navbar-dark .navbar-brand {
+    color: rgb(252, 255, 219);
+    font-size: 30px;
+    font-weight: 100;
+    margin: 8px 0 0 20px;
+}
+
+ul {
+    font-size: 25px;
+    font-weight: 100;
+    color: rgb(250, 254, 210);
+    margin: -47px 30px 0 0px; 
+}
+
+li:hover {
+    color: #eec53e;
+}
+
+
