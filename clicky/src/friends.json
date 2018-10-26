@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "SpongeBob",
-    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/666px-Spongebob-squarepants.svg.png",
+    "image": "http://www.iconarchive.com/download/i102732/martin-berube/square-animal/Penguin.ico",
     "occupation": "Fry Cook",
     "location": "A Pineapple Under the Sea"
     
@@ -83,5 +83,32 @@
     "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
     "occupation": "Ahhhh! A Real Monster!",
     "location": "Under a City Dump"
+  },
+
+  {
+    "id": 13,
+    "name": "Ickis",
+    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
+    "occupation": "Ahhhh! A Real Monster!",
+    "location": "Under a City Dump"
+  },
+
+  {
+    "id": 14,
+    "name": "Ickis",
+    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
+    "occupation": "Ahhhh! A Real Monster!",
+    "location": "Under a City Dump"
+  },
+
+  {
+    "id": 15,
+    "name": "Ickis",
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f864c114439933.56283f7a9208e.jpg",
+    "occupation": "Ahhhh! A Real Monster!",
+    "location": "Under a City Dump"
   }
+
+
+
 ]

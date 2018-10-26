@@ -27,7 +27,7 @@ class App extends Component {
     return array;
   };
 
-  
+
 
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
@@ -36,7 +36,7 @@ class App extends Component {
       this.setState({clicked:this.state.clicked.concat(id)});
     } else {
       alert("lost, it was in the array");
-      //this.handleReset();
+      this.handleReset();
     }
   };
 
@@ -57,6 +57,17 @@ class App extends Component {
     
   };
 
+  handleReset = () => {
+    this.setState({
+      currentScore: 0,
+      topScore: this.state.topScore,
+      winner: "Wrong Answer!",
+      clicked: []
+    });
+    var shuffledArray = this.handleShuffleCard(this.state.friends);
+    this.setState({ friends: shuffledArray });
+  };
+
 
   
 
@@ -66,10 +77,12 @@ class App extends Component {
       <Wrapper>
 
         <Nav>
-          winner={this.state.rightWrong}
+          winner={this.state.winner}
           score={this.state.currentScore}
           topScore={this.state.topScore}
         </Nav>
+
+        
 
 
         <Title>Clicky Game</Title>
