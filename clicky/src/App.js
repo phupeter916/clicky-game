@@ -14,16 +14,29 @@ class App extends Component {
     friends,
     currentScore: 0,
     topScore: 0,
-    rightWrong: "",
+    winner: "",
     clicked: [],
   };
 
+
+  handleShuffleCard(array) {
+     for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  
+
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
+      console.log("OK");
       this.handleIncrement();
       this.setState({clicked:this.state.clicked.concat(id)});
     } else {
-      this.handleReset();
+      alert("lost, it was in the array");
+      //this.handleReset();
     }
   };
 
@@ -31,16 +44,19 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      rightWrong: ""
+      winner: ""
     });
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
     }
     else if (newScore === 24) {
-      this.setState({ rightWrong: "Wahoo, You Won!" });
+      this.setState({ winner: "Congratulations, You Won!" });
     }
-    this.handleShuffle();
+    var shuffledArray = this.handleShuffleCard(this.state.friends);
+    this.setState({ friends: shuffledArray });
+    
   };
+
 
   
 
@@ -50,7 +66,9 @@ class App extends Component {
       <Wrapper>
 
         <Nav>
-          
+          winner={this.state.rightWrong}
+          score={this.state.currentScore}
+          topScore={this.state.topScore}
         </Nav>
 
 
@@ -61,6 +79,7 @@ class App extends Component {
             key={friend.id}
             name={friend.name}
             image={friend.image}
+            handleClick={this.handleClick}
             
           />
         ))}
