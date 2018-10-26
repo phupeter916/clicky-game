@@ -76,12 +76,11 @@ class App extends Component {
     return (
       <Wrapper>
 
-        <Nav>
+        <Nav
           winner={this.state.winner}
           score={this.state.currentScore}
           topScore={this.state.topScore}
-        </Nav>
-
+        />
         
 
 
@@ -93,7 +92,6 @@ class App extends Component {
             name={friend.name}
             image={friend.image}
             handleClick={this.handleClick}
-            
           />
         ))}
       </Wrapper>

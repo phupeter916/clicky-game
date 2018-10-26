@@ -8,7 +8,7 @@ const Nav = props => (
     {props.title}
     </a>
     <ul className="navbar-nav  justify-content-end text-uppercase">
-    <li className="nav-item" id="winner">{props.rightWrong}</li>
+    <li className="nav-item" id="winner">{props.winner}</li>
     
     
       <li className="nav-item" id="current-score">Current Score: {props.score}</li>
@@ -17,6 +17,7 @@ const Nav = props => (
       <li className="nav-item" id="top-score">Top Score: {props.topScore}</li>
     </ul>
   </nav>
+  
   </div>
 );
 
