@@ -22,9 +22,18 @@ li:hover {
     color: #eec53e;
 }
 
-.nav-item {
-    margin-top: 20px;
-
+#NavTitle {
+    margin-left: 50px;
 }
 
+#WinnerAlert {
+    margin-left: 150px;
+}
 
+#winner {
+    margin-right: 80px;
+}
+
+#current-score {
+    margin-right: 30px;
+}

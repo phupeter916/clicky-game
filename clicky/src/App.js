@@ -35,7 +35,6 @@ class App extends Component {
       this.handleIncrement();
       this.setState({clicked:this.state.clicked.concat(id)});
     } else {
-      alert("lost, it was in the array");
       this.handleReset();
     }
   };
@@ -61,7 +60,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      winner: "Wrong Answer!",
+      winner: "Wrong Answer! Play Again!",
       clicked: []
     });
     var shuffledArray = this.handleShuffleCard(this.state.friends);
@@ -82,9 +81,11 @@ class App extends Component {
           topScore={this.state.topScore}
         />
         
+      <br/>
+      <br/>
+      <br/>
 
-
-        <Title>Clicky Game</Title>
+        <Title>Please click images and avoid clicking it twice!</Title>
         {this.state.friends.map(friend => (
           <FriendCard
             id={friend.id}
